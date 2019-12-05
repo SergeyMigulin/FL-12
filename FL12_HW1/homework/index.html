@@ -22,8 +22,8 @@
                   <a href="#textFormats"><strong>Text formats</strong></a>
                   <a href="#typesOfLists"><strong>Types of lists</strong></a>
                   <a href="#table"><strong>Table</strong></a>
-                  <a href="#"><strong>Blockquotes</strong></a>
-                  <a href="#"><strong>Registration</strong></a>
+                  <a href="#blockquotes"><strong>Blockquotes</strong></a>
+                  <a href="#registration"><strong>Registration</strong></a>
               </nav>
               <hr>
             </header>
@@ -145,7 +145,7 @@ both           <b>spaces</b> and
                       </dl>
                     </section>
                     <span>Select for learning
-                      <select name="selectForLearning" id="" form="formID">
+                      <select name="selectForLearning" form="registration">
                         <option value="JS">JS</option>
                         <option value="HTML">HTML</option>
                         <option value="CSS">CSS</option>
@@ -191,17 +191,29 @@ both           <b>spaces</b> and
                   </tfoot>
                 </table>
               </section>
-              <section>
+              <section id="blockquotes">
                 <h2>Blockquotes</h2>
                 <p>Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
                  <blockquote>
-                   <p>"So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, make it easy to read."</p>
-                   <cite><a href="">Robert C. Martin (Uncle Bob)</a></cite>
-                  </blockquote>
-                  
-                </section>
-            
-            
+                  <span>"So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, make it easy to read."
+                    <br>
+                    <a href="#">Robert C. Martin (Uncle Bob)</a>
+                  </span>
+                 </blockquote>
+              </section>
+              <hr>
+              <div>
+              <form action="#" method="post" id="registration">
+                <label>Username: <input type="text" name="username" size="23" required></label><br>
+                <label>Email: <input type="email" name="email" size="23" required></label><br>
+                <label>Password: <input type="password" name="password" size="23" required></label><br>
+                <textarea name="formText" cols="23" rows="5"></textarea><br>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+            <footer>
+                &copy; Copyright Epam Systems
+            </footer>
         </div>
       </div>
     </div>
