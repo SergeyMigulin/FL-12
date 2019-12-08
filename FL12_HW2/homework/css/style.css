@@ -17,10 +17,60 @@
 .tm-banner-text{
     position: relative;
     text-shadow: 3px 5px 3px #333;
-    animation: text 4s; 
+    animation: text 3s; 
     animation-timing-function: ease;
 }
 @keyframes text {
     from {right: -200px;}
-    to {right: 0px;}
+    to {right: 0;}
+}
+
+.flex-2-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .tm-section-title {
+    text-align: center;
+} */
+p.tm-section-description {
+    text-indent: 25px;
+    line-height: 30px;
+}
+
+.box-bg:hover {
+    background-color: lightgrey;
+    color: lightskyblue;
+}
+
+.padding-medium > h2 {
+    text-align: center;
+    color: lightskyblue;
+}
+
+#contact > h2 {
+    text-align: left;
+}
+
+.padding-medium > ol {
+    list-style: lower-alpha;
+}
+.padding-medium > ol > li:hover::before {
+    content: ">";
+    font-weight: 600;
+}
+
+.text::after {
+    content: "New";
+    vertical-align: top;
+    font-size: 10px;
+    font-weight: 600;
+    font-variant: small-caps;
+    color: red;
+}
+
+text:hover::after{
+    content: "New";
+    text-decoration: none!important;
+    display: inline-block;
 }
