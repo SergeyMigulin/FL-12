@@ -1,4 +1,4 @@
-@media scriin {
+@media screen {
     .tm-nav-item-link:hover {
         background-color: lightskyblue;
         color: #fff;
@@ -130,7 +130,9 @@
 }
 
 @media print {
+    .tm-main-content,
     body {
+        padding-top: 0;
         background-color: #fff;
     }
 
@@ -151,16 +153,26 @@
         text-align: center;
     }
 
+    .padding-medium p.tm-section-description:last-child,
     .tm-content-box {
         margin-bottom: 0;
     }
-    .tm-main-content {
+    div.padding-medium.tm-team-description-container {
         padding-top: 0;
     }
     .padding-medium, .carousel {
         padding-bottom: 0;
     }
     
+    .padding-medium > ol {
+        list-style: none;
+    }
+    .padding-medium > ol > li:nth-child(odd){
+        margin-left: 12em;
+    }
+    .padding-medium > ol > li:nth-child(even){
+        margin-right: 15em;
+    }
     h2 {
         text-transform: uppercase;
         color: lightskyblue;
