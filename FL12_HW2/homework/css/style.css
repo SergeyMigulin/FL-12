@@ -1,10 +1,4 @@
-@media print {
-    
-
-}
-
-@media screen {
-
+@media scriin {
     .tm-nav-item-link:hover {
         background-color: lightskyblue;
         color: #fff;
@@ -87,7 +81,7 @@
         padding: 10px;
         border: 1px transparent solid;
         color: #fff;
-        background-color: #87CEFA;
+        background-color: lightskyblue;
     }
     ul > li.box-work:nth-child(even){
         padding: 10px;
@@ -96,13 +90,13 @@
 
     input.form-control {
         border: 0;
-        border-bottom: 1px solid #9FD8FB;
+        border-bottom: 1px solid lightskyblue;
     }
     input.form-control:focus {
-        background-color: #87CEFA;
+        background-color: lightskyblue;
     }
     textarea.form-control {
-        border-color: #9FD8FB;
+        border-color: lightskyblue;
     }
     textarea.form-control {
         background: url(../img/email-icon.png) no-repeat scroll 99% 95%;
@@ -112,8 +106,8 @@
     #contact button {
         float: right;
         padding: 1rem;
-        color: #9FD8FB;
-        border-color: #9FD8FB;
+        color: lightskyblue;
+        border-color: lightskyblue;
         background-color: #fff;
     }
 
@@ -131,7 +125,45 @@
         content: '';
         border-style: solid;
         border-width: 50px 50px 0 0;
-        border-color: #9FD8FB transparent transparent transparent;
+        border-color: lightskyblue transparent transparent transparent;
+    }
+}
+
+@media print {
+    body {
+        background-color: #fff;
+    }
+
+    #contact, 
+    .tm-content-box > img,
+    .tm-sidebar, .tm-team-img, .boxes, .carousel-indicators  {
+        display: none;
+    }
+
+    .blocks > div > p:last-child {
+        letter-spacing: 5px;
+        word-spacing: 10px;
+        font-style: italic;
+    }
+
+    .tm-team-description-container, .padding-medium {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .tm-content-box {
+        margin-bottom: 0;
+    }
+    .tm-main-content {
+        padding-top: 0;
+    }
+    .padding-medium, .carousel {
+        padding-bottom: 0;
     }
     
-}
+    h2 {
+        text-transform: uppercase;
+        color: lightskyblue;
+        font-weight: 300;
+    }
+}   
