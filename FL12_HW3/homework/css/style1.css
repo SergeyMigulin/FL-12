@@ -2,8 +2,7 @@ body {
   margin: 0; }
 
 .header {
-  min-width: 100%;
-  min-height: 75vh;
+  min-height: 37vh;
   border-radius: 0 0 40% 50% / 100% 60% 40% 0;
   background-image: url(../img/m-h-day.jpg);
   background-repeat: no-repeat;
@@ -11,7 +10,8 @@ body {
   background-size: cover; }
 
 .header-wrap {
-  padding-left: 90px; }
+  padding-left: 10%;
+  font-family: "Source Sans Pro", sans-serif; }
   .header-wrap .landing-logo {
     display: flex; }
     .header-wrap .landing-logo img {
@@ -34,12 +34,42 @@ body {
         text-align: center;
         line-height: 0.1; }
   .header-wrap .header_heading {
-    width: 30%;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 36px;
-    font-weight: 600;
-    margin-top: 10px;
-    letter-spacing: -1px;
-    line-height: 1; }
+    position: relative;
+    z-index: 1;
+    width: 10em;
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 0.5em;
+    margin-bottom: 0.4em;
+    line-height: 1.1;
+    letter-spacing: 1px; }
+    .header-wrap .header_heading::before {
+      content: '';
+      width: 4.4em;
+      height: 0.6em;
+      position: absolute;
+      top: 1.4em;
+      z-index: -1;
+      background-color: lightskyblue; }
+  .header-wrap .header_text {
+    font-size: xx-small;
+    white-space: pre-line;
+    font-weight: normal;
+    color: #404040; }
+    .header-wrap .header_text + div {
+      margin-top: 1.7em; }
+      .header-wrap .header_text + div .header_button {
+        width: 7em;
+        height: 2.5em;
+        padding: 2px 5px;
+        font-size: xx-small;
+        color: white;
+        background-color: #699901;
+        border-radius: 0.1em;
+        border: 0; }
+      .header-wrap .header_text + div .login {
+        margin-left: 7em;
+        color: white;
+        font-size: x-small; }
 
 /*# sourceMappingURL=style1.css.map */
