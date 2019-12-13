@@ -1,7 +1,45 @@
-header {
+body {
+  margin: 0; }
+
+.header {
   min-width: 100%;
+  min-height: 75vh;
+  border-radius: 0 0 40% 50% / 100% 60% 40% 0;
   background-image: url(../img/m-h-day.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover; }
+
+.header-wrap {
+  padding-left: 90px; }
+  .header-wrap .landing-logo {
+    display: flex; }
+    .header-wrap .landing-logo img {
+      width: 1.3em;
+      height: 1.3em;
+      padding-top: 10px; }
+    .header-wrap .landing-logo p {
+      display: flex;
+      flex-direction: column;
+      margin-left: -5px;
+      margin-top: -5px;
+      padding: 10px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.7em;
+      line-height: 2em; }
+      .header-wrap .landing-logo p span {
+        font-weight: normal;
+        font-size: 0.4em;
+        text-align: center;
+        line-height: 0.1; }
+  .header-wrap .header_heading {
+    width: 30%;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 10px;
+    letter-spacing: -1px;
+    line-height: 1; }
 
 /*# sourceMappingURL=style1.css.map */
