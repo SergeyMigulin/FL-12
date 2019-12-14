@@ -1,45 +1,77 @@
+$fontFm: (
+    "pro": ("Source Sans Pro", sans-serif),
+    "hind": (Hind, sans-serif),
+    "fresca": (Fresca, sans-serif));
+
+%logoTextP{
+    display: flex;
+    flex-direction: column;
+    margin: -7px 11px;
+    font-weight: 600;
+    font-size: 1.3em;
+    line-height: 2em;
+}
+%logoTextS{
+    font-weight: normal;
+    font-size: 0.4em;
+    text-align: center;
+    line-height: 0.1;
+}
+%highlight{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-color: lightskyblue;
+}
+
+@mixin btn {
+    width: 8em;
+    height: 2.5em;
+    padding: 2px 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 0.1em;
+    color: white;
+    background-color: #699901;
+}
+@mixin link($mg-left, $ft-size, $color:white) {
+    margin-left: $mg-left; //7em;
+    font-size: $ft-size; //1.1em;
+    color: $color; //white;
+}
+
 body {
     margin: 0;
+    width: 1663px;
+    height: 2022px;
 }
+
 .header {
-    // min-height: 75vh; // for fullscreen?
-    min-height: 37vh;
-    border-radius: 0 0 40% 50% / 100% 60% 40% 0;
-    background-image: url(../img/m-h-day.jpg) ;
+    height: 624px;
+    border-radius: 0 0 40% 0;
+    background-image: $bgImg;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+
 .header-wrap {
     padding-left: 10%;
-    font-family: $sansPro;
+    font-family: map-get($fontFm, "pro");
 
     .landing-logo{
         display: flex;
+        padding-top: 1em;
         
         img{
-            width: 1.3em;
-            height: 1.3em;
-            padding-top: 10px; 
+            height: 40px;
         }
 
         p{
-            display: flex;
-            flex-direction: column;
-            margin-left: -5px;
-            margin-top: -5px;
-            padding: 10px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.7em;
-            line-height: 2em;
+            @extend %logoTextP;
 
             span{
-                font-weight: normal;
-                font-size: 0.4em;
-                text-align: center;
-                line-height: 0.1;
-
+                @extend %logoTextS
             }
         }
         
@@ -49,52 +81,42 @@ body {
         position: relative;
         z-index: 1;
         width: 10em;
-        font-size: 2em;
+        font-size: 4em;
         font-weight: 700;
-        margin-top: 0.5em;
-        margin-bottom: 0.4em;
-        line-height: 1.1;
-        letter-spacing: 1px;
+        margin-top: 0.9em;
+        margin-bottom: 0;
+        line-height: 1;
+        letter-spacing: -1px;
 
         &::before{
-            content: '';
-            width: 4.4em;
-            height: 0.6em;
-            position: absolute;
-            top: 1.4em;
-            z-index: -1;
-            background-color: lightskyblue;
+            @extend %highlight;
+            
+            width: 4.1em;
+            height: 0.7em;
+            top: 1.3em;
         }
     }
 
     .header_text{
-        font-size: xx-small;
+        margin-top: 1.6em;
+        line-height: 1.5;
+        letter-spacing: .1px;
+        padding-top: .5em;
+        font-size: .9em;
         white-space: pre-line;
         font-weight: normal;
         color: lighten(black, 25%);
 
         & + div {
-            margin-top: 1.7em;
+            margin-top: 3.3em;
 
             .header_button{
-                width: 7em;
-                height: 2.5em;
-                padding: 2px 5px;
-                font-size: xx-small;
-                color: white;
-                background-color: #699901;
-                border-radius: 0.1em;
-                border: 0;
+                @include btn;
             }
 
             .login{
-                margin-left: 7em;
-                color: white;
-                font-size: x-small;
+                @include link($firstLinkMgLeft, $firstLinkFtSize);
             }
         }
     }
-
-
-
 }

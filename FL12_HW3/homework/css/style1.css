@@ -1,9 +1,31 @@
+.header-wrap .landing-logo p {
+  display: flex;
+  flex-direction: column;
+  margin: -7px 11px;
+  font-weight: 600;
+  font-size: 1.3em;
+  line-height: 2em; }
+
+.header-wrap .landing-logo p span {
+  font-weight: normal;
+  font-size: 0.4em;
+  text-align: center;
+  line-height: 0.1; }
+
+.header-wrap .header_heading::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: lightskyblue; }
+
 body {
-  margin: 0; }
+  margin: 0;
+  width: 1663px;
+  height: 2022px; }
 
 .header {
-  min-height: 37vh;
-  border-radius: 0 0 40% 50% / 100% 60% 40% 0;
+  height: 624px;
+  border-radius: 0 0 40% 0;
   background-image: url(../img/m-h-day.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -13,63 +35,47 @@ body {
   padding-left: 10%;
   font-family: "Source Sans Pro", sans-serif; }
   .header-wrap .landing-logo {
-    display: flex; }
+    display: flex;
+    padding-top: 1em; }
     .header-wrap .landing-logo img {
-      width: 1.3em;
-      height: 1.3em;
-      padding-top: 10px; }
-    .header-wrap .landing-logo p {
-      display: flex;
-      flex-direction: column;
-      margin-left: -5px;
-      margin-top: -5px;
-      padding: 10px;
-      text-align: left;
-      font-weight: 600;
-      font-size: 0.7em;
-      line-height: 2em; }
-      .header-wrap .landing-logo p span {
-        font-weight: normal;
-        font-size: 0.4em;
-        text-align: center;
-        line-height: 0.1; }
+      height: 40px; }
   .header-wrap .header_heading {
     position: relative;
     z-index: 1;
     width: 10em;
-    font-size: 2em;
+    font-size: 4em;
     font-weight: 700;
-    margin-top: 0.5em;
-    margin-bottom: 0.4em;
-    line-height: 1.1;
-    letter-spacing: 1px; }
+    margin-top: 0.9em;
+    margin-bottom: 0;
+    line-height: 1;
+    letter-spacing: -1px; }
     .header-wrap .header_heading::before {
-      content: '';
-      width: 4.4em;
-      height: 0.6em;
-      position: absolute;
-      top: 1.4em;
-      z-index: -1;
-      background-color: lightskyblue; }
+      width: 4.1em;
+      height: 0.7em;
+      top: 1.3em; }
   .header-wrap .header_text {
-    font-size: xx-small;
+    margin-top: 1.6em;
+    line-height: 1.5;
+    letter-spacing: .1px;
+    padding-top: .5em;
+    font-size: .9em;
     white-space: pre-line;
     font-weight: normal;
     color: #404040; }
     .header-wrap .header_text + div {
-      margin-top: 1.7em; }
+      margin-top: 3.3em; }
       .header-wrap .header_text + div .header_button {
-        width: 7em;
+        width: 8em;
         height: 2.5em;
         padding: 2px 5px;
-        font-size: xx-small;
-        color: white;
-        background-color: #699901;
+        font-size: 1em;
+        border: none;
         border-radius: 0.1em;
-        border: 0; }
+        color: white;
+        background-color: #699901; }
       .header-wrap .header_text + div .login {
         margin-left: 7em;
-        color: white;
-        font-size: x-small; }
+        font-size: 1.1em;
+        color: white; }
 
 /*# sourceMappingURL=style1.css.map */
