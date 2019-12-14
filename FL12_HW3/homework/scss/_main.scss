@@ -21,7 +21,7 @@ $fontFm: (
     content: '';
     position: absolute;
     z-index: -1;
-    background-color: lightskyblue;
+    background-color: $highlightColor;
 }
 
 @mixin btn {
@@ -32,18 +32,33 @@ $fontFm: (
     border: none;
     border-radius: 0.1em;
     color: white;
-    background-color: #699901;
+    background-color: $btnColor;
+
+    &:hover,
+    &:focus{
+        background-color: lighten($btnColor, 5%);
+    }
 }
 @mixin link($mg-left, $ft-size, $color:white) {
-    margin-left: $mg-left; //7em;
-    font-size: $ft-size; //1.1em;
-    color: $color; //white;
+    margin-left: $mg-left;
+    font-size: $ft-size;
+    color: $color;
+
+    display: inline-block;
+    margin-bottom: 2em;
+    font-family: map-get($fontFm, "hind");
+
+    &:hover,
+    &:focus {
+        color: darken($color, 10%);
+    }
 }
 
 body {
-    margin: 0;
     width: 1663px;
     height: 2022px;
+    margin: 0;
+    font-family: map-get($fontFm, "pro");
 }
 
 .header {
@@ -57,7 +72,6 @@ body {
 
 .header-wrap {
     padding-left: 10%;
-    font-family: map-get($fontFm, "pro");
 
     .landing-logo{
         display: flex;
@@ -99,13 +113,16 @@ body {
 
     .header_text{
         margin-top: 1.6em;
+        padding-top: .5em;
+        font: {
+            family: map-get($fontFm, "hind");
+            weight: normal;
+            size: .9em;
+        }
         line-height: 1.5;
         letter-spacing: .1px;
-        padding-top: .5em;
-        font-size: .9em;
         white-space: pre-line;
-        font-weight: normal;
-        color: lighten(black, 25%);
+        color: lighten(black, 20%);
 
         & + div {
             margin-top: 3.3em;
@@ -120,3 +137,68 @@ body {
         }
     }
 }
+
+main{
+    .section_text{
+        position: relative;
+        z-index: 1;
+        margin-top: .85em;
+        margin-bottom: .9em;
+        font-size: 2.3em;
+        font-weight: 600;
+        text-align: center;
+
+        &::before{
+            @extend %highlight;
+    
+            left: 22.8em;
+            width: 4.5em;
+            height: 1em;
+        }
+    }
+
+    .section_card_wrap{
+        width: 58%;
+        margin: 0 auto;
+
+        .section_card{
+            display: flex;
+            margin-bottom: 1em;
+            line-height: 25px;
+            border-radius: .4em;
+            background-color: #21232E;
+
+            .section_card_img {
+                width: 40%;
+                padding: 1em;
+                border-radius: .4em;
+            }
+            
+            .section_card_right_container {
+                width: 60%;
+                text-align: center;
+
+                .section_card_heading{
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    margin-top: 3em;
+                    margin-bottom: 2em;
+                    color: #fffff6;
+                }
+                
+                .section_card_text{
+                    margin: 3em 3em;
+                    font-family: map-get($fontFm,"hind");
+                    text-align: justify;
+                    color: #B1BCC6;
+                }
+
+                .section_link {
+                    @include link(null, null, #A0B4C8); 
+                }
+            }
+        }
+    }
+
+}
+
