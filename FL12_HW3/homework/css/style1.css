@@ -26,7 +26,9 @@ body {
   width: 1663px;
   height: 2022px;
   margin: 0;
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "Source Sans Pro", sans-serif;
+  color: black;
+  background-color: white; }
 
 .header {
   height: 624px;
@@ -75,6 +77,7 @@ body {
         border: none;
         border-radius: 0.1em;
         color: white;
+        font-weight: bold;
         background-color: #699900; }
         .header-wrap .header_text + div .header_button:hover, .header-wrap .header_text + div .header_button:focus {
           background-color: #7bb300; }
@@ -105,7 +108,7 @@ main .section_card_wrap {
   margin: 0 auto; }
   main .section_card_wrap .section_card {
     display: flex;
-    margin-top: 1em;
+    margin-top: 1.4em;
     line-height: 25px;
     border-radius: 0.4em;
     background-color: #21232E; }
@@ -173,6 +176,7 @@ main .section_banner {
     border: none;
     border-radius: 0.1em;
     color: white;
+    font-weight: bold;
     background-color: #699900; }
     main .section_banner .section_banner_button:hover, main .section_banner .section_banner_button:focus {
       background-color: #7bb300; }
@@ -204,5 +208,3 @@ main .section_banner {
       margin-top: 5px;
       margin-left: 410px;
       font-size: .85em; }
-
-/*# sourceMappingURL=style1.css.map */
