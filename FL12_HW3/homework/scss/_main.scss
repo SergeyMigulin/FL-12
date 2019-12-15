@@ -51,11 +51,12 @@ $fontFm: (
     border: none;
     border-radius: 0.1em;
     color: white;
-    background-color: $btnColor;
+    font-weight: bold;
+    background-color: $btnBgColor;
 
     &:hover,
     &:focus{
-        background-color: lighten($btnColor, 5%);
+        background-color: lighten($btnBgColor, 5%);
     }
 }
 @mixin link($mg-left, $ft-size, $color:white) {
@@ -78,6 +79,8 @@ body {
     height: 2022px;
     margin: 0;
     font-family: map-get($fontFm, "pro");
+    color: $themeTextColor;
+    background-color: $bgColor;
 }
 
 .header {
@@ -130,7 +133,11 @@ body {
         line-height: 1.5;
         letter-spacing: .1px;
         white-space: pre-line;
-        color: lighten(black, 20%);
+
+        color: if($themeTextColor == black,
+            lighten($themeTextColor, 20%),
+            darken($themeTextColor, 20%)
+        );
 
         & + div {
             margin-top: 3.3em;
@@ -171,7 +178,7 @@ main{
 
         .section_card{
             display: flex;
-            margin-top: 1em;
+            margin-top: 1.4em;
             line-height: 25px;
             border-radius: $sectionRadius;
             background-color: $bgCardColor;
@@ -229,7 +236,7 @@ main{
                 margin-bottom: 0;
                 font-size: 1.7em;
                 font-weight: bold;
-                color: $sectionBanerHeading;
+                color: $sectionBanerHeadingColor;
                 position: relative;
                 z-index: 1;
 
@@ -245,7 +252,7 @@ main{
             .section_banner_text {
                 margin-top: 14px;
                 margin-bottom: 38px;
-                color: $sectionBanerText;
+                color: $sectionBanerTextColor;
             }
         }
 
@@ -264,7 +271,7 @@ main{
     padding-right: 167px;
     font-family: map-get($fontFm, 'hind');
     color: white;
-    background-color: $footerColor;
+    background-color: $footerBgColor;
 
     .footer-wrap {
         display: flex;
