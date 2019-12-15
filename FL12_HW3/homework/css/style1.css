@@ -1,4 +1,4 @@
-.header-wrap .landing-logo p, .footer .footer-wrap .footer-logo p {
+.header-wrap .landing-logo p, .footer .footer-wrap .footer_logo p {
   display: flex;
   flex-direction: column;
   margin: -7px 11px;
@@ -6,11 +6,15 @@
   font-size: 1.3em;
   line-height: 2em; }
 
-.header-wrap .landing-logo p span, .footer .footer-wrap .footer-logo p span {
+.header-wrap .landing-logo p span, .footer .footer-wrap .footer_logo p span {
   font-weight: normal;
   font-size: 0.4em;
   text-align: center;
   line-height: 0.1; }
+
+.header-wrap .landing-logo img, .footer .footer-wrap .footer_logo img {
+  width: 40px;
+  height: 40px; }
 
 .header-wrap .header_heading::before, main .section_text::before, main .section_banner .section_banner_text_wrap .section_banner_heading::before {
   content: '';
@@ -37,8 +41,6 @@ body {
   .header-wrap .landing-logo {
     display: flex;
     padding-top: 1em; }
-    .header-wrap .landing-logo img {
-      height: 40px; }
   .header-wrap .header_heading {
     position: relative;
     z-index: 1;
@@ -179,28 +181,28 @@ main .section_banner {
   position: relative;
   z-index: -1;
   bottom: 62px;
-  height: 182px;
-  padding-left: 164px;
-  padding-right: 164px;
+  height: 212px;
+  padding-left: 167px;
+  padding-right: 167px;
   font-family: Hind, sans-serif;
   color: white;
   background-color: #21232e; }
   .footer .footer-wrap {
-    display: flex; }
-    .footer .footer-wrap .footer-logo {
+    display: flex;
+    padding-top: 120px; }
+    .footer .footer-wrap .footer_logo {
       display: flex; }
-      .footer .footer-wrap .footer-logo img {
-        width: 40px;
-        height: 40px; }
     .footer .footer-wrap .footer_text {
-      width: 255px;
-      margin-left: 465px;
-      font-size: 1em;
-      text-align: left; }
+      width: 252px;
+      margin: 0;
+      margin-top: -5px;
+      margin-left: 379px;
+      font-size: .75em;
+      text-align: left;
+      line-height: 1.3; }
     .footer .footer-wrap .footer-cr {
-      display: inline-block;
-      width: 170px;
-      margin-left: 407px;
-      font-size: 1em; }
+      margin-top: 5px;
+      margin-left: 410px;
+      font-size: .85em; }
 
 /*# sourceMappingURL=style1.css.map */
