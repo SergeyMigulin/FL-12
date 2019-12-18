@@ -1,0 +1,96 @@
+:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #024161;
+  --link: #fff;
+  --link--hover: #1f52a4;
+  --bg-footer-color: #024161;
+}
+
+body {
+  font-family: roboto;
+}
+.post-1 {
+	background: #9d27b0;
+}
+.post-2 {
+	background: #9bb800;
+}
+.post-3 {
+	background: #ed5120;
+}
+.post-4 {
+	background: #9d27b0;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+/* Your styles go here */
+* {
+  box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.menu li {
+  display: inline-block;
+  padding: 0 30px;
+  list-style: none;
+}
+.menu nav{
+  text-align: center;
+}
+a{
+  text-decoration: none;
+}
+@media only screen and (max-width: 1400px) {	
+  .header{
+    background-color: var(--bg-color--header);
+  }
+  .menu li {
+    padding: 0 20px;
+  }
+  .menu nav{
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 768px) {	
+  .header{
+    background-color: var(--bg-color--dark);
+  }
+  .menu li {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {	
+  .header{
+    background-color: yellow;
+  }
+  .menu li {
+    padding: 0 5px;
+  }
+}
