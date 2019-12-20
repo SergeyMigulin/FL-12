@@ -26,71 +26,63 @@ body {
 }
 
 /* Your styles go here */
+body, html{
+  height: 100%;
+}
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-  border: 1px solid red;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.menu li {
-  display: inline-block;
-  padding: 0 30px;
-  list-style: none;
-}
-.menu nav{
-  text-align: center;
-}
-a{
-  text-decoration: none;
-}
-@media only screen and (max-width: 1400px) {	
-  .header{
-    background-color: var(--bg-color--header);
-  }
-  .menu li {
-    padding: 0 20px;
-  }
-  .menu nav{
-    float: right;
-  }
+@media only screen and (max-width: 480px) {	
+  
 }
 
 @media only screen and (max-width: 768px) {	
-  .header{
-    background-color: var(--bg-color--dark);
+  .logo a{
+    text-align: center;
   }
-  .menu li {
-    padding: 0 10px;
+  .nav{
+    display: none;
   }
 }
 
-@media only screen and (max-width: 480px) {	
+@media only screen and (max-width: 1400px) {	
   .header{
-    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color--header);
   }
-  .menu li {
-    padding: 0 5px;
+  .logo{
+    font-weight: 200;
+    margin-left: 1%;
+  }
+  .logo span{
+    color: #B72A66;
+  }
+  .logo a:hover span{
+    color: var(--link--hover);
+  }
+  .nav{
+    margin-right: 5%;
+  }
+  .nav > ul{
+    list-style: none;
+  }
+  .nav li{
+    display: inline-block;
+  }
+  .nav a{
+    display: block;
+    padding: 1.5em;
+  }
+  .nav a:hover{
+    background-color: var(--link--hover);
+  }
+  a{
+    color: var(--link);
+    text-decoration: none;
   }
 }
