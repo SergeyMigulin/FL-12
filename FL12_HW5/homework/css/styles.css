@@ -47,7 +47,6 @@ a{
   display: none;
   width: 1.5em;
   height: .2em;
-  background-color: black;
   margin: 6px 0;
 }
 .sandwich:first-child{
@@ -55,6 +54,7 @@ a{
   background-color: #fff;
 }
 .sandwich:first-child + div{
+  margin-bottom: -1px;
   background-color: #568096;
 }
 .sandwich:last-child{
@@ -62,6 +62,24 @@ a{
   margin-bottom: 3em;
   background-color: #5D8599;
 }
+
+.articles-block{
+  float: left;
+  width: 75%;
+  color: white;
+}
+.news{
+  float: right;
+  width: 24%;
+  color: black;
+  background-color: white;
+}
+.clearfix::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
 @media only screen and (max-width: 480px) {	
   
 }
@@ -79,6 +97,9 @@ a{
   }
   .nav{
     display: none;
+  }
+  .awesome-story :last-child{
+    max-width: 85%;
   }
 }
 
