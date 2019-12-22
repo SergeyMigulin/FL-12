@@ -29,7 +29,7 @@ body, html{
   height: 100%;
 }
 body{
-  background-color: var(--bg-color-dark);
+  background-color: #0b192f;
 }
 * {
   margin: 0;
@@ -38,7 +38,7 @@ body{
 }
 
 a{
-  color: var(--link);
+  color: #fff;
   text-decoration: none;
 }
 
@@ -81,7 +81,7 @@ a{
   padding-top: 1em;
   padding-bottom: .5em;
   color: white;
-  background-color: var(--bg-footer-color);
+  background-color: #024161;
   opacity: .8;
 }
 .footer div:first-child{
@@ -134,7 +134,7 @@ a{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1em;
-    background-color: var(--bg-color-header);
+    background-color: #024161;
   }
   
   .logo{
@@ -145,7 +145,7 @@ a{
     color: #B72A66;
   }
   .logo a:hover span{
-    color: var(--link-hover);
+    color: #1f52a4;
   }
   .nav{
     margin-right: 5%;
@@ -161,7 +161,7 @@ a{
     padding: 1.5em;
   }
   .nav a:hover{
-    background-color: var(--link-hover);
+    background-color: #1f52a4;
   }
 
   .awesome-story{
