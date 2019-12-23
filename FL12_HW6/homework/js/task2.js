@@ -1,6 +1,14 @@
-const a = +prompt('For identify triangle type:\nenter your lenth of the first side');
-const b = +prompt('For identify triangle type:\nenter your lenth of the second side');
-const c = +prompt('For identify triangle type:\nenter your lenth of the third side');
+let x;
+
+const a = (x = prompt('For identify triangle type:\nenter your lenth of the first side')) === ''
+            ? NaN 
+            : +x;
+const b = (x = prompt('For identify triangle type:\nenter your lenth of the second side')) === ''
+            ? NaN 
+            : +x;
+const c = (x = prompt('For identify triangle type:\nenter your lenth of the third side')) === ''
+            ? NaN 
+            : +x;
 
 if(
     !isFinite(a) || 
