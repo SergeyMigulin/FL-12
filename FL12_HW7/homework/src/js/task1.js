@@ -62,7 +62,7 @@ if(email === '' || email === null){
                             }
                         }
                     }else {
-                        alert('admin, wrong old pwd')
+                        alert('Wrong password')
                     }
                 }
 
@@ -84,7 +84,7 @@ if(email === '' || email === null){
                             }
                         }
                     }else {
-                        alert('user, wrong old pwd')
+                        alert('Wrong password')
                     }
                 }
             }
