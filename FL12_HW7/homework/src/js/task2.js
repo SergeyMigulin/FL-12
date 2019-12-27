@@ -18,9 +18,10 @@ if(!willPlay){
 }  
     // const diceNumber = Math.floor(Math.random() * range.end + 1);
     
-for(let bufferConversionChecker, diceNumber;
-    willPlay;
-    diceNumber = Math.floor(Math.random() * range.end + 1)
+for(let bufferConversionChecker, diceNumber, casinoAttemptsCounter = 1;
+    willPlay; // && casinoAttemptsCounter <= user.attemptions;
+    diceNumber = Math.floor(Math.random() * range.end + 1),
+    casinoAttemptsCounter++
 ){
     user.choise = (bufferConversionChecker = prompt(`
         Choose a roulette pocket number from ${range.start} to ${range.end}
@@ -33,7 +34,8 @@ for(let bufferConversionChecker, diceNumber;
 
     //game with 3 attempts
     user.attempt++;
-    if(user.choise === diceNumber && user.attempt === 1){
+    if(user.choise === diceNumber && 
+        user.attempt <= user.attemptions){
         prize.total += prize.possible;
 
         willPlay = confirm(`
