@@ -1,4 +1,6 @@
 let willPlay = confirm('Do you want to play a game?');
+const two = 2;
+const three = 3;
 const prize = {
     total: 0,
     continuousFactor: 1,
@@ -46,8 +48,6 @@ for(bufferConversionChecker,
 
     }
 
-    
-
     if(user.choise === diceNumber && 
         user.attempt <= user.attemptions){
 
@@ -55,11 +55,11 @@ for(bufferConversionChecker,
             prize.currentPossible = prize.firstPossible * prize.continuousFactor;
             prize.total += prize.currentPossible;
         }
-        if(user.attempt === 2){
+        if(user.attempt === two){
             prize.currentPossible = prize.secondPossible * prize.continuousFactor;
             prize.total += prize.currentPossible;
         }
-        if(user.attempt === 3){
+        if(user.attempt === three){
             prize.currentPossible = prize.thirdPossible * prize.continuousFactor;
             prize.total += prize.currentPossible;
         }
@@ -77,8 +77,8 @@ for(bufferConversionChecker,
 
             prize.continuousFactor++;
             prize.firstPossible *= prize.continuousFactor;
-            prize.secondPossible = Math.floor(prize.firstPossible / 2);
-            prize.thirdPossible = Math.floor(prize.secondPossible / 2);
+            prize.secondPossible = Math.floor(prize.firstPossible / two);
+            prize.thirdPossible = Math.floor(prize.secondPossible / two);
             prize.currentPossible = prize.firstPossible * prize.continuousFactor;
         }else{
 
@@ -99,17 +99,17 @@ for(bufferConversionChecker,
                 prize.continuousFactor = 1;
                 prize.total = 0;
                 prize.firstPossible = 100;
-                prize.secondPossible = Math.floor(prize.firstPossible / 2);
-                prize.thirdPossible = Math.floor(prize.secondPossible /2);
+                prize.secondPossible = Math.floor(prize.firstPossible / two);
+                prize.thirdPossible = Math.floor(prize.secondPossible / two);
                 prize.currentPossible = prize.firstPossible * prize.continuousFactor;
             }
         }
     }else{
-        if(user.attemptions - user.attempt === 3){
+        if(user.attemptions - user.attempt === three){
             prize.currentPossible = prize.firstPossible * prize.continuousFactor;
             continue;
         }
-        if(user.attemptions - user.attempt === 2){
+        if(user.attemptions - user.attempt === two){
             prize.currentPossible = prize.secondPossible * prize.continuousFactor;
             continue;
         }
@@ -135,8 +135,8 @@ for(bufferConversionChecker,
              prize.continuousFactor = 1;
              prize.total = 0;
              prize.firstPossible = 100;
-             prize.secondPossible = Math.floor(prize.firstPossible / 2);
-             prize.thirdPossible = Math.floor(prize.secondPossible /2);
+             prize.secondPossible = Math.floor(prize.firstPossible / two);
+             prize.thirdPossible = Math.floor(prize.secondPossible / two);
              prize.currentPossible = prize.firstPossible;
         }
     }
